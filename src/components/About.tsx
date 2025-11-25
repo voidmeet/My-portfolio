@@ -26,7 +26,7 @@ const About = () => {
   }, []);
 
   const stats = [
-    { number: `${calculateExperienceYears(2024, 4, 1).toFixed(1)}+`, label: 'Years Experience' },
+    { number: `${calculateExperienceYears(2024, 3, 1).toFixed(1)}+`, label: 'Years Experience' },
     { number: '10+', label: 'Projects Deployed' },
     { number: '7', label: 'Cloud Platforms' },
     { number: '90.0%', label: 'Uptime Achieved' },
@@ -39,24 +39,24 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Left: Avatar/DevOps Dashboard */}
             <div className={`relative ${isVisible ? 'animate-slide-up' : 'opacity-0'}`}>
-              <div className="relative w-80 h-80 mx-auto">
+              <div className="relative w-80 h-80 sm:w-96 sm:h-96 mx-auto">
                 <div className="absolute inset-0 bg-gradient-cyber rounded-2xl blur-xl opacity-30 animate-pulse-neon" />
-                <div className="relative w-full h-full bg-tech-gray rounded-2xl border-gradient overflow-hidden">
+                <div className="relative w-full h-full rounded-2xl border-gradient overflow-hidden" style={{ backgroundColor: '#ACAA9D' }}>
                   <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+                    src="/meet-bundela.jpg"
                     alt="Meet Bundela"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-tech-gray/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-tech-gray/90 via-transparent to-transparent" />
                   {/* DevOps Status Indicators */}
                   <div className="absolute top-4 left-4 space-y-2">
-                    <div className="flex items-center gap-2 px-2 py-1 bg-black/50 rounded text-xs font-jetbrains">
+                    <div className="flex items-center gap-2 px-2 py-1 bg-black/60 backdrop-blur-sm rounded text-xs font-jetbrains border border-white/10">
                       <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                      <span className="text-green-400">SYSTEMS ONLINE</span>
+                      <span className="text-green-400 font-bold">SYSTEMS ONLINE</span>
                     </div>
-                    <div className="flex items-center gap-2 px-2 py-1 bg-black/50 rounded text-xs font-jetbrains">
+                    <div className="flex items-center gap-2 px-2 py-1 bg-black/60 backdrop-blur-sm rounded text-xs font-jetbrains border border-white/10">
                       <div className="w-2 h-2 bg-neon-blue rounded-full animate-pulse-neon" />
-                      <span className="text-neon-blue">CI/CD ACTIVE</span>
+                      <span className="text-neon-blue font-bold">CI/CD ACTIVE</span>
                     </div>
                   </div>
                 </div>
@@ -70,9 +70,9 @@ const About = () => {
                 </h2>
                 <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
                   <p>
-                    A focused <span className="text-neon-blue font-medium">Cloud/DevOps Engineer</span> having {calculateExperienceYears(2024, 4, 1).toFixed(1)} years of hands-on experience 
-                    in companies tying up with government and enterprise clients. I design and maintain resilient, high availability infrastructures across AWS, Azure, GCP, Hetzner, DigitalOcean, Contabo and IONOS. 
-                    I excel at rapidly resolving <span className="text-neon-purple font-medium">production issues</span>, 
+                    A focused <span className="text-neon-blue font-medium">Cloud/DevOps Engineer</span> having {calculateExperienceYears(2024, 3, 1).toFixed(1)} years of hands-on experience
+                    in companies tying up with government and enterprise clients. I design and maintain resilient, high availability infrastructures across AWS, Azure, GCP, Hetzner, DigitalOcean, Contabo and IONOS.
+                    I excel at rapidly resolving <span className="text-neon-purple font-medium">production issues</span>,
                     while upholding robust security practices and comprehensive configuration management.
                   </p>
                   <p>
@@ -83,11 +83,10 @@ const About = () => {
               {/* DevOps Stats Grid */}
               <div className="grid grid-cols-2 gap-6">
                 {stats.map((stat, index) => (
-                  <div 
+                  <div
                     key={stat.label}
-                    className={`glass-effect p-6 rounded-xl border-gradient text-center ${
-                      isVisible ? 'animate-slide-up' : 'opacity-0'
-                    }`}
+                    className={`glass-effect p-6 rounded-xl border-gradient text-center ${isVisible ? 'animate-slide-up' : 'opacity-0'
+                      }`}
                     style={{ animationDelay: `${0.4 + index * 0.1}s` }}
                   >
                     <div className="text-2xl md:text-3xl font-bold text-gradient font-jetbrains">

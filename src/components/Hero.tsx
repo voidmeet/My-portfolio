@@ -22,14 +22,14 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden tech-grid px-4 sm:px-6 pb-[env(safe-area-inset-bottom)]">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div 
+        <div
           className="absolute w-96 h-96 bg-gradient-cyber opacity-20 rounded-full blur-3xl animate-float"
           style={{
             left: `${mousePosition.x * 0.1}%`,
             top: `${mousePosition.y * 0.1}%`,
           }}
         />
-        <div 
+        <div
           className="absolute w-64 h-64 bg-gradient-to-br from-neon-purple to-transparent opacity-30 rounded-full blur-2xl animate-float"
           style={{
             right: `${mousePosition.x * 0.05}%`,
@@ -53,7 +53,7 @@ const Hero = () => {
             <div className="mt-4 flex flex-col items-center gap-2">
               <div className="flex justify-center items-center gap-3 sm:gap-4 text-xs sm:text-sm font-jetbrains">
                 <span className="px-3 py-1 badge-glass-neon rounded-full text-neon-yellow">
-                  {`${calculateExperienceYears(2024, 4, 1).toFixed(1)}+ Years Experience`}
+                  {`${calculateExperienceYears(2024, 3, 1).toFixed(1)}+ Years Experience`}
                 </span>
               </div>
               <a
@@ -70,8 +70,8 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="btn-neon-gradient hover:scale-105 transition-all duration-300 px-8 py-3 text-lg font-medium"
               onClick={() => {
                 const arsenal = document.getElementById('arsenal-section');
@@ -84,13 +84,19 @@ const Hero = () => {
             >
               View My Arsenal
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="btn-filled-magenta glass-effect transition-all duration-300 px-8 py-3 text-lg"
+            <a
+              href="https://drive.google.com/file/d/1ZfAcwqV64ExAJ6hOTci1HHnI2MlDVrNH/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Download Resume
-            </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="btn-filled-magenta glass-effect transition-all duration-300 px-8 py-3 text-lg"
+              >
+                Download Resume
+              </Button>
+            </a>
           </div>
 
           {/* Scroll Indicator */}
@@ -134,7 +140,7 @@ const Hero = () => {
       <div className="absolute top-1/3 right-20 w-3 h-3 bg-neon-purple rounded-full animate-pulse-neon opacity-40" style={{ animationDelay: '1s' }} />
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-neon-blue rounded-full animate-pulse-neon opacity-80" style={{ animationDelay: '2s' }} />
       <div className="absolute bottom-1/3 right-1/3 w-2 h-2 bg-neon-purple rounded-full animate-pulse-neon opacity-50" style={{ animationDelay: '3s' }} />
-      
+
       {/* Server rack indicators */}
       <div className="absolute top-20 right-32 flex flex-col gap-1">
         {[1, 2, 3].map((i) => (
