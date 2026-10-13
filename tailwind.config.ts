@@ -20,8 +20,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'jetbrains': ['JetBrains Mono', 'monospace'],
-				'inter': ['Inter', 'sans-serif'],
+				display: ['"Space Grotesk"', 'Inter', 'sans-serif'],
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -57,10 +58,9 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				'neon-blue': 'hsl(var(--neon-blue))',
-				'neon-purple': 'hsl(var(--neon-purple))',
-				'cyber-dark': 'hsl(var(--cyber-dark))',
-				'tech-gray': 'hsl(var(--tech-gray))',
+				volt: 'rgb(198 255 61 / <alpha-value>)',
+				neon: 'rgb(61 224 255 / <alpha-value>)',
+				ultra: 'rgb(139 92 255 / <alpha-value>)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
