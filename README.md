@@ -1,73 +1,39 @@
-# Welcome to your Lovable project
+# meetbundela.in v3
 
-## Project info
+Personal portfolio of **Meet Bundela**, DevOps Engineer.
 
-**URL**: https://lovable.dev/projects/66fc748e-65eb-47e9-99e8-899fac85a999
+## Stack
 
-## How can I edit this code?
+- **React 18 + Vite + TypeScript + Tailwind**
+- **three.js / @react-three/fiber**: one GPU particle system (11k points, custom GLSL) that follows you down the page and morphs into a different shape for each section: planet core → torus knot → double‑helix pipeline → cluster lattice → galaxy → portal
+- **GSAP ScrollTrigger**: pinned horizontal "pipeline" for experience
+- **Lenis**: smooth scrolling, whose velocity drives the marquee skew and particle turbulence
+- **Framer Motion**: scroll-lit manifesto text, stacking project cards, masked text reveals, magnetic buttons, tilt + holographic cards
 
-There are several ways of editing your application.
+Also included: a boot-sequence preloader, a custom cursor, spotlight bento cards and an interactive terminal (`help`, `skills`, `projects`, `sudo hire-meet` …).
+Respects `prefers-reduced-motion`; on touch devices the custom cursor is disabled and the particle count drops.
 
-**Use Lovable**
+## Editing content
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/66fc748e-65eb-47e9-99e8-899fac85a999) and start prompting.
+All copy lives in `src/data/portfolio.ts` (experience, projects, skills, certification, socials).
+The CV served by the "Download CV" button is `public/Meet_Bundela_CV.pdf`.
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Develop
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+npm run dev      # http://localhost:8080
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+### Contact form
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The form sends through EmailJS when these are set (e.g. in `.env.local` or your host's env settings):
 
-**Use GitHub Codespaces**
+```
+VITE_EMAILJS_SERVICE_ID=...
+VITE_EMAILJS_TEMPLATE_ID=...
+VITE_EMAILJS_PUBLIC_KEY=...
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/66fc748e-65eb-47e9-99e8-899fac85a999) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Without them it falls back to opening the visitor's mail client.
